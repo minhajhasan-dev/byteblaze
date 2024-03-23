@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -9,7 +10,7 @@ const Navbar = () => {
   }, [theme]);
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("synthwave");
+      setTheme("dark");
     } else {
       setTheme("light");
     }
@@ -19,21 +20,41 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 w-full fixed shadow-lg px-4 z-10">
         <div className="flex-1">
-          <a className="btn btn-ghost gap-0 text-secondary normal-case text-2xl">
+          <Link
+            to={"/"}
+            className="btn btn-ghost gap-0 text-secondary normal-case text-2xl"
+          >
             Byte<span className="text-primary">Blaze</span>
-          </a>
+          </Link>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li className="font-bold">
-              <a>Home</a>
-            </li>
-            <li className="font-bold text-primary">
-              <a>Blogs</a>
-            </li>
-            <li className="font-bold">
-              <a>Bookmarks</a>
-            </li>
+        <div className="flex-none flex gap-5">
+          <ul className="menu menu-horizontal flex gap-5 px-1">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to={"/blogs"}
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Blogs
+            </NavLink>
+
+            <NavLink
+              to={"/bookmarks"}
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Bookmarks
+            </NavLink>
           </ul>
           <label className="cursor-pointer grid place-items-center">
             <input
