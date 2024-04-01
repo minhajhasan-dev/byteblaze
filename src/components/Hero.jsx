@@ -5,18 +5,28 @@ const Hero = () => {
     <div className="hero -mt-16">
       <div className="hero-content text-center">
         <div className="max-w-lg">
-          <h1 className="text-5xl font-bold">
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-5xl font-bold"
+          >
             Welcome to{" "}
             <span className="bg-gradient-to-r bg-300% from-primary via-blue-500 to-secondary text-transparent bg-clip-text animate-gradient">
               ByteBlaze
             </span>
           </h1>
-          <p className="py-6">
+          <p data-aos="zoom-out" data-aos-duration="1000" className="py-6">
             ByteBlaze is the bridge between the complex world of technology and
             the curious minds eager to understand it
           </p>
-          <div className="flex gap-5 justify-center">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            className="flex gap-5 justify-center"
+          >
             <Link
+              data-aos="fade-right"
+              data-aos-duration="1000"
               to={"/blogs"}
               className="relative inline-block px-4 py-2 font-medium group"
             >
@@ -28,6 +38,8 @@ const Hero = () => {
             </Link>
 
             <Link
+              data-aos="fade-left"
+              data-aos-duration="1000"
               to={"/bookmarks"}
               className="relative inline-block px-4 py-2 font-medium group"
             >

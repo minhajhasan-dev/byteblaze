@@ -10,6 +10,8 @@ const Blogs = () => {
     <section className="dark:bg-gray-800 py-6 dark:text-gray-100">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <Link
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           to={`/blog/${blogs[0].id}`}
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900"
         >
@@ -31,7 +33,7 @@ const Blogs = () => {
         </Link>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogs.slice(1).map((blog) => (
-            <BlogCard blog={blog} key={blog.id}></BlogCard>
+            <BlogCard  blog={blog} key={blog.id}></BlogCard>
           ))}
         </div>
       </div>

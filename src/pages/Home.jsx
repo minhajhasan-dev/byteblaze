@@ -2,6 +2,9 @@ import { useNavigation } from "react-router-dom";
 import wave from "../assets/wave.svg";
 import Hero from "../components/Hero";
 import Loader from "../components/Loader";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const Home = () => {
   const navigation = useNavigation();
   if (navigation.state === "loading") return <Loader></Loader>;

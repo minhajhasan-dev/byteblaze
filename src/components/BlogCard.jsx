@@ -9,6 +9,8 @@ const BlogCard = ({ blog, deletable, handleDelete }) => {
   return (
     <div className=" flex relative">
       <Link
+        data-aos="zoom-in"
+        data-aos-duration="1000"
         to={`/blog/${id}`}
         className="max-w-sm mx-auto group transition border-2 hover:scale-105 border-primary hover:border-secondary hover:no-underline border-opacity-30 focus:no-underline dark:bg-gray-900"
       >
